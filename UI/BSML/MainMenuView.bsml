@@ -1,0 +1,42 @@
+﻿<bg xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='https://monkeymanboy.github.io/BSML-Docs/ https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd'>
+	<settings-container child-control-width='true' child-expand-width='true' size-delta-y='0'>
+		<horizontal>
+			<text pref-height='6' text='Click and clear your RAM!' font-size='4'></text>
+			<button pref-height='6' on-click='TriggerGCButtonClicked' text='Trigger GC'/> 
+		</horizontal>
+		<vertical vertical-fit='PreferredSize' preferred-height='18'>
+			<checkbox-setting pref-height='6' value ='TriggerGCAfterPlayedMaps' on-change='SetTriggerGCAfterPlayedMaps' text='Auto GC:'></checkbox-setting>
+			<text pref-height='6' text='How many maps have to be played to trigger GC?' font-size='4' align='Center'></text>
+			<slider-setting pref-height='6' id='PlayedMapsCountSlider' show-buttons='true' value ='PlayedMapsCountValue' on-change='SetPlayedMapsCountValue' text='Count:' rich-text='true' increment='1' min='1' max='10'></slider-setting>
+		</vertical>
+		<horizontal>
+			<text pref-height='6' text='RAM status:' font-size='4'></text>
+			<text pref-height='6' text='(' font-size='4'></text>
+			<text pref-height='6' text='GC' font-size='4'></text>
+			<text pref-height='6' text='-' font-size='4'></text>
+			<text pref-height='6' text='Free' font-size='4'></text>
+			<text pref-height='6' text='-' font-size='4'></text>
+			<text pref-height='6' text='All' font-size='4'></text>
+			<text pref-height='6' text=')' font-size='4'></text>
+			<text pref-height='6' text='[Unit]' font-size='4'></text>
+		</horizontal>
+		<horizontal>
+			<text pref-height='6' text='RAM status:' font-size='4'></text>
+			<text pref-height='6' text='(' font-size='4'></text>
+			<text pref-height='6' text='~CurrentGCRAMUsage' font-size='4'></text>
+			<text pref-height='6' text='-' font-size='4'></text>
+			<text pref-height='6' text='~AvailableRAM' font-size='4'></text>
+			<text pref-height='6' text='-' font-size='4'></text>
+			<text pref-height='6' text='~SystemRAM' font-size='4'></text>
+			<text pref-height='6' text=')' font-size='4'></text>
+			<text pref-height='6' text='[MB]' font-size='4'></text> 
+		</horizontal>
+		<horizontal>
+			<text pref-height='6' text='RAM Difference from last update:' font-size='4'></text> 
+			<text pref-height='6' text='~GCRAMDelta' font-size='4'></text> 
+		</horizontal>
+		<horizontal preferred-height='6'>
+			<text pref-height='3' text="Made by: Drakonno" font-size='3' color="#FFFF00" align="Center"/>
+		</horizontal>
+	</settings-container>
+</bg>
